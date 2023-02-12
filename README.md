@@ -8,10 +8,10 @@ The API consists of the following endpoints:
 
 - `GET /`: A dummy endpoint that returns a success message.
 - `GET /getAllTodoCards`: Returns all Todo cards.
-- `GET /getTodoCard`: Returns a Todo card based on the given `id`.
+- `GET /getTodoCard?id=${id}`: Returns a Todo card based on the given `id`.
 - `POST /addtodoCard`: Adds a new Todo card.
-- `PATCH /updateTodoCard`: Updates an existing Todo card based on the given `id`.
-- `DELETE /deleteTodoCard`: Deletes a Todo card based on the given `id`.
+- `PATCH /updateTodoCard?id=${id}`: Updates an existing Todo card based on the given `id`.
+- `DELETE /deleteTodoCard?id=${id}`: Deletes a Todo card based on the given `id`.
 
 ## Running Locally
 
