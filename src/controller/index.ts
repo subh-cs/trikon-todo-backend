@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
 const TodoCard = require("../model/schema");
 
+export const dummy = async (req: Request, res: Response) => {
+  res.status(200).json({ message: "Hello World" });
+};
+
 export const addTodoCard = async (req: Request, res: Response) => {
   try {
     const { title, description } = req.body;
@@ -36,7 +40,7 @@ export const updateTodo = async (req: Request, res: Response) => {
     const { title, description } = req.body;
     const todoCard = await TodoCard.findByIdAndUpdate(id, {
       title,
-      description
+      description,
     });
     res.status(200).json(todoCard);
   } catch (error) {

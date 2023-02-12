@@ -6,8 +6,10 @@ import {
   updateTodo,
   deleteTodo,
   getTodoCard,
+  dummy,
 } from "../controller";
 
+router.get("/", dummy);
 router.get("/getAllTodoCards", getAllTodoCards);
 router.get("/getTodoCard", getTodoCard);
 router.post("/addtodoCard", addTodoCard);
